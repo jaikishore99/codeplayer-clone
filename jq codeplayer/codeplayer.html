@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeplayer</title>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui/jquery-ui.js"></script>
+    <link href="jquery-ui-1.12.1/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            background: rgb(221, 220, 220);
+        }
+
+        #header {
+            width: 100%;
+            background-color: rgb(207, 206, 206);
+            padding: 5px;
+            height: 30px;
+        }
+
+        #btn-container {
+            margin: 0 auto;
+            width: 350px;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .toggleButton {
+            float: left;
+            padding: 5px;
+            border-right: none;
+            border: none;
+        }
+
+        #logo {
+            float: left;
+            padding-top: 3px;
+            padding-left: 5px;
+            font-weight: bold;
+            color: rgb(63, 72, 206);
+        }
+
+        .active {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #html {
+            border: 1px solid grey;
+            border-radius: 20px;
+            margin-left: 2px;
+        }
+
+        #output {
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+
+        #css {
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+
+        #javascript {
+            border: 1px solid grey;
+            border-radius: 20px;
+        }
+
+        .highlightedButton {
+            background-color: rgb(203, 207, 218);
+        }
+
+        textarea {
+            width: 50%;
+            resize: none;
+        }
+
+        .panel {
+            float: left;
+            width: 100%;
+            border: 1px solid black;
+            border-left: none;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #htmlPanel {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #cssPanel {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #javascriptPanel {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #outputPanel {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        ::placeholder {
+            color: rgb(45, 73, 199);
+            font-size: 20px;
+            padding-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo">
+            codeplayer
+        </div>
+        <div id="btn-container">
+            <div class="toggleButton active" id="html">HTML</div>
+            <div class="toggleButton" id="css">CSS</div>
+            <div class="toggleButton" id="javascript">JAVASCRIPT</div>
+            <div class="toggleButton active" id="output">OUTPUT</div>
+        </div>
+    </div>
+
+
+
+    <div id="body-container">
+        <textarea id="htmlPanel" class="panel" placeholder="HTML"></textarea>
+        <textarea id="cssPanel" class="panel hidden" placeholder="CSS"></textarea>
+        <textarea id="javascriptPanel" class="panel hidden" placeholder="JAVASCRIPT"></textarea>
+        <iframe id="outputPanel" class="panel"></iframe>
+    </div>
+
+    <script src="coadplay.js"></script>
+</body>
+
+</html>
